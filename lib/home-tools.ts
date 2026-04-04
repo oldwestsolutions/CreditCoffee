@@ -29,10 +29,10 @@ export const homeToolCards: HomeToolCard[] = [
     ],
   },
   {
-    id: "utilization-and-debt",
+    id: "credit-utilization-calculator",
     imageUrl:
       "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
-    imageAlt: "Credit utilization and debt planning",
+    imageAlt: "Credit utilization",
     items: [
       {
         slug: "credit-utilization-calculator",
@@ -41,20 +41,13 @@ export const homeToolCards: HomeToolCard[] = [
           "Enter your credit limits and balances to instantly calculate your utilization ratio.",
         buttonText: "Calculate Utilization",
       },
-      {
-        slug: "debt-payoff-planner",
-        title: "Debt Payoff Planner",
-        description:
-          "Compare avalanche vs snowball payoff strategies and generate a personalized plan.",
-        buttonText: "Plan Payoff",
-      },
     ],
   },
   {
-    id: "loans-and-approval",
+    id: "loan-comparison",
     imageUrl:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-    imageAlt: "Loan comparison and approval",
+    imageAlt: "Loan comparison",
     items: [
       {
         slug: "loan-comparison",
@@ -62,13 +55,6 @@ export const homeToolCards: HomeToolCard[] = [
         description:
           "Compare interest rates, terms, and total cost across multiple loan options.",
         buttonText: "Compare Loans",
-      },
-      {
-        slug: "approval-odds-estimator",
-        title: "Approval Odds Estimator",
-        description:
-          "Estimate your chances of approval based on score range, income, and credit history.",
-        buttonText: "Check Odds",
       },
     ],
   },
