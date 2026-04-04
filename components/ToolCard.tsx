@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { HomeTool } from "@/lib/home-tools";
+import type { HomeToolCard } from "@/lib/home-tools";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -14,7 +14,9 @@ const fadeUp = {
   }),
 };
 
-export function ToolCard({ tool, index }: { tool: HomeTool; index: number }) {
+export function ToolCard({ card, index }: { card: HomeToolCard; index: number }) {
+  const multi = card.items.length > 1;
+
   return (
     <motion.article
       custom={index}
@@ -26,27 +28,33 @@ export function ToolCard({ tool, index }: { tool: HomeTool; index: number }) {
     >
       <div className="aspect-[16/10] overflow-hidden shrink-0 relative">
         <Image
-          src={tool.imageUrl}
-          alt={tool.imageAlt}
+          src={card.imageUrl}
+          alt={card.imageAlt}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <div className="p-6 flex flex-col flex-1">
-        <span className="tag w-fit mb-3">Tool</span>
-        <h3 className="text-lg font-serif font-semibold text-forest-900 mb-2 leading-tight group-hover:text-brand-gold transition-colors">
-          {tool.title}
-        </h3>
-        <p className="text-sm text-forest-700/70 leading-relaxed flex-1 mb-5">
-          {tool.description}
-        </p>
-        <Link
-          href={`/tools/${tool.slug}`}
-          className="btn-primary text-center text-sm py-2.5 w-full sm:w-auto sm:self-start"
-        >
-          {tool.buttonText}
-        </Link>
+        {card.items.map((item, idx) => (
+          <div key={item.slug} className={idx > 0 ? "mt-8 pt-8 border-t border-cream-200" : ""}>
+            <span className="tag w-fit mb-3">Tool</span>
+            <h3 className="text-lg font-serif font-semibold text-forest-900 mb-2 leading-tight group-hover:text-brand-gold transition-colors">
+              {item.title}
+            </h3>
+            <p className="text-sm text-forest-700/70 leading-relaxed mb-5">
+              {item.description}
+            </p>
+            <Link
+              href={`/tools/${item.slug}`}
+              className={`btn-primary text-center text-sm py-2.5 ${
+                multi ? "w-full" : "w-full sm:w-auto sm:self-start"
+              }`}
+            >
+              {item.buttonText}
+            </Link>
+          </div>
+        ))}
       </div>
     </motion.article>
   );

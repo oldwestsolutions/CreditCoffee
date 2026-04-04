@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { homeTools } from "@/lib/home-tools";
+import { findToolBySlug, getAllToolSlugs } from "@/lib/home-tools";
 
 type Props = { params: { slug: string } };
 
 export function generateStaticParams() {
-  return homeTools.map((t) => ({ slug: t.slug }));
+  return getAllToolSlugs();
 }
 
 export default function ToolPlaceholderPage({ params }: Props) {
-  const tool = homeTools.find((t) => t.slug === params.slug);
+  const tool = findToolBySlug(params.slug);
   if (!tool) notFound();
 
   return (
