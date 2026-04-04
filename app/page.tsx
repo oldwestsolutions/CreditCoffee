@@ -16,7 +16,7 @@ const fadeUp = {
 export default function Home() {
   return (
     <>
-      {/* Hero */}
+      {/* Hero — About Us */}
       <section className="relative min-h-[90vh] flex items-center bg-forest-900 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(201,169,110,0.12)_0%,_transparent_60%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(11,61,46,0.8)_0%,_transparent_60%)]" />
@@ -24,19 +24,6 @@ export default function Home() {
 
         <div className="container-main relative z-10 py-24 md:py-32">
           <div className="max-w-3xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full 
-                         bg-brand-gold/10 border border-brand-gold/20 mb-8"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse-slow" />
-              <span className="text-brand-gold text-xs font-medium tracking-wider uppercase">
-                Now earning $BEAN rewards
-              </span>
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -44,26 +31,37 @@ export default function Home() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-semibold 
                          text-cream-100 leading-[1.1] tracking-tight mb-6"
             >
-              Credit is not debt.
+              Financial literacy,
               <br />
-              <span className="text-brand-gold">It&apos;s access.</span>
+              <span className="text-brand-gold">one cup at a time.</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-lg md:text-xl text-cream-400 max-w-xl leading-relaxed mb-10 font-light"
+              className="text-lg md:text-xl text-cream-400 max-w-xl leading-relaxed mb-6 font-light"
             >
-              A financial newsletter and attention-powered ad network. 
-              Read curated insights on credit, banking, and wealth systems — 
-              and earn crypto for every minute of focus.
+              Credit Coffee is a financial media platform built in the spirit of 
+              Seattle coffee culture — calm, intentional, and crafted for people 
+              who take their money as seriously as their morning pour-over.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-base text-cream-500 max-w-xl leading-relaxed mb-10 font-light"
+            >
+              We publish curated insights on credit optimization, banking strategy, 
+              and wealth systems — and we reward you for your attention with real 
+              crypto payouts. No noise. No gimmicks. Just signal.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link
@@ -73,46 +71,26 @@ export default function Home() {
                 Start Reading
               </Link>
               <Link
-                href="/ads"
+                href="/about"
                 className="px-8 py-4 rounded-xl text-center text-base font-medium
                            border border-cream-400/20 text-cream-300 
                            hover:bg-cream-100/5 hover:border-cream-400/40
                            transition-all duration-300"
               >
-                Earn $BEAN
+                Our Story
               </Link>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex items-center gap-8 mt-14 pt-8 border-t border-forest-700/30"
-            >
-              {[
-                { value: "12K+", label: "Readers" },
-                { value: "$47K", label: "$BEAN earned" },
-                { value: "280+", label: "Perks unlocked" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="text-2xl font-serif font-semibold text-cream-100">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs text-forest-400 mt-1">{stat.label}</div>
-                </div>
-              ))}
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Value Props */}
+      {/* What We Cover — Ad Subjects */}
       <section className="py-24 md:py-32 bg-cream-200">
         <div className="container-main">
           <div className="text-center mb-16">
-            <h2 className="section-heading mb-4">How It Works</h2>
+            <h2 className="section-heading mb-4">What We Cover</h2>
             <p className="section-subheading mx-auto">
-              Three pillars of financial intelligence, unified in one platform.
+              Deep dives into the financial systems that shape your access, your credit, and your wealth.
             </p>
           </div>
 
@@ -120,21 +98,21 @@ export default function Home() {
             {[
               {
                 step: "01",
-                title: "Read",
-                desc: "Curated articles on credit optimization, banking strategy, travel hacking, and wealth systems. No fluff — just signal.",
+                title: "Credit & Banking",
+                desc: "Credit score architecture, business credit stacking, banking relationship tiers, and the strategies institutions use to evaluate you.",
                 link: "/newsletter",
               },
               {
                 step: "02",
-                title: "Unlock",
-                desc: "Explore a living directory of financial perks: cashback, sign-up bonuses, high-yield accounts, business credit lines, and more.",
+                title: "Cards & Rewards",
+                desc: "Sign-up bonuses, cashback optimization, travel hacking playbooks, and how to build a card portfolio that works for your lifestyle.",
                 link: "/perks",
               },
               {
                 step: "03",
-                title: "Earn",
-                desc: "View curated sponsor content and earn $BEAN tokens for your attention. Real value for real engagement.",
-                link: "/ads",
+                title: "Wealth & Strategy",
+                desc: "Tax positioning frameworks, asset-based lending, SBA eligibility, margin accounts, and the financial tools the informed use quietly.",
+                link: "/perks",
               },
             ].map((item, i) => (
               <motion.div
@@ -239,7 +217,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Token Economy */}
+      {/* Coinbase Integration */}
       <section className="py-24 md:py-32 bg-forest-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(201,169,110,0.06)_0%,_transparent_70%)]" />
         <div className="container-main relative z-10">
@@ -253,38 +231,38 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full 
                               bg-brand-gold/10 border border-brand-gold/20 mb-8">
                 <span className="text-brand-gold text-xs font-medium tracking-wider uppercase">
-                  The $BEAN Token
+                  Powered by Coinbase
                 </span>
               </div>
               <h2 className="text-3xl md:text-5xl font-serif font-semibold text-cream-100 
                              leading-tight mb-6">
-                Your attention has value.
+                Your rewards.
                 <br />
-                <span className="text-brand-gold">We pay you for it.</span>
+                <span className="text-brand-gold">Real crypto. Real wallets.</span>
               </h2>
               <p className="text-lg text-cream-400 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-                View curated sponsor content, complete the &ldquo;Coffee Break&rdquo; timer, 
-                and earn $BEAN tokens. Build your balance through reading streaks, 
-                referrals, and consistent engagement.
+                Credit Coffee connects directly to Coinbase so your $BEAN earnings 
+                live in a real wallet. View your balance, transfer to Coinbase, 
+                and manage your tokens — all from one place.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[
                 {
-                  icon: "☕",
-                  title: "Coffee Break Timer",
-                  desc: "30-second focused viewing earns $BEAN per ad",
+                  icon: "🔗",
+                  title: "Coinbase Wallet",
+                  desc: "Link your Coinbase account to receive $BEAN payouts directly to your wallet.",
                 },
                 {
-                  icon: "🔥",
-                  title: "Reading Streaks",
-                  desc: "Daily engagement multiplies your earning rate",
+                  icon: "💰",
+                  title: "Instant Settlement",
+                  desc: "Earnings are settled on-chain. No delays, no minimums, no hidden fees.",
                 },
                 {
-                  icon: "🤝",
-                  title: "Referral Revenue",
-                  desc: "Earn a percentage of downstream ad revenue",
+                  icon: "📊",
+                  title: "Portfolio View",
+                  desc: "Track your $BEAN alongside the rest of your Coinbase portfolio in one dashboard.",
                 },
               ].map((feature, i) => (
                 <motion.div
@@ -310,7 +288,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Subscribe CTA */}
       <section className="py-24 md:py-32 bg-cream-200">
         <div className="container-main">
           <div className="max-w-3xl mx-auto text-center">
@@ -324,7 +302,7 @@ export default function Home() {
                 Start your morning brew.
               </h2>
               <p className="section-subheading mx-auto mb-10">
-                Join thousands of readers who start their day with credit.coffee. 
+                Join thousands of readers who start their day with Credit Coffee. 
                 No spam, no noise — just financial clarity.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">

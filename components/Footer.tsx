@@ -2,13 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 
 const footerLinks = {
   product: [
     { label: "Newsletter", href: "/newsletter" },
     { label: "Perks Directory", href: "/perks" },
-    { label: "Earn $BEAN", href: "/ads" },
     { label: "Dashboard", href: "/dashboard" },
   ],
   company: [
@@ -25,57 +23,29 @@ const footerLinks = {
 
 export default function Footer() {
   const pathname = usePathname();
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
 
   const hideFooterPaths = ["/login", "/dashboard"];
   if (hideFooterPaths.includes(pathname)) return null;
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail("");
-      setTimeout(() => setSubscribed(false), 3000);
-    }
-  };
 
   return (
     <footer className="bg-forest-900 text-cream-200">
       <div className="container-main py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-cream-200 flex items-center justify-center">
-                <span className="text-forest-900 text-sm font-serif font-bold">c</span>
-              </div>
+            <Link href="/" className="flex items-center gap-2.5 mb-4">
+              <svg className="w-8 h-8 text-cream-200" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 10C6 8.89543 6.89543 8 8 8H20C21.1046 8 22 8.89543 22 10V11H23C25.2091 11 27 12.7909 27 15C27 17.2091 25.2091 19 23 19H22V20C22 22.2091 20.2091 24 18 24H10C7.79086 24 6 22.2091 6 20V10Z" fill="currentColor"/>
+                <path d="M22 13H23C24.1046 13 25 13.8954 25 15C25 16.1046 24.1046 17 23 17H22V13Z" fill="#0B3D2E"/>
+                <path d="M10 26H18C18 26 17.5 28 14 28C10.5 28 10 26 10 26Z" fill="currentColor" opacity="0.5"/>
+              </svg>
               <span className="text-xl font-serif font-semibold text-cream-100 tracking-tight">
-                credit.coffee
+                Credit Coffee
               </span>
             </Link>
             <p className="text-cream-400 text-sm leading-relaxed mb-6 max-w-sm">
               Financial intelligence, brewed daily. Read curated content, unlock perks, 
-              and earn $BEAN for your attention. Credit is not debt — it&apos;s access.
+              and build your financial literacy. Credit is not debt — it&apos;s access.
             </p>
-            <form onSubmit={handleSubscribe} className="flex gap-2 max-w-sm">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                className="flex-1 px-4 py-2.5 rounded-xl bg-forest-800 border border-forest-700 
-                           text-cream-100 placeholder:text-forest-500 text-sm
-                           focus:outline-none focus:ring-1 focus:ring-brand-gold focus:border-brand-gold
-                           transition-all"
-              />
-              <button
-                type="submit"
-                className="px-5 py-2.5 rounded-xl bg-brand-gold text-forest-900 text-sm font-semibold
-                           hover:bg-cream-500 transition-all whitespace-nowrap"
-              >
-                {subscribed ? "Subscribed!" : "Subscribe"}
-              </button>
-            </form>
           </div>
 
           <div>
@@ -135,7 +105,7 @@ export default function Footer() {
 
         <div className="border-t border-forest-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-forest-500">
-            &copy; {new Date().getFullYear()} credit.coffee. All rights reserved.
+            &copy; {new Date().getFullYear()} Centuries Mutual. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a href="#" className="text-forest-500 hover:text-cream-300 transition-colors" aria-label="Twitter">
