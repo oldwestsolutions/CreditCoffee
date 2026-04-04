@@ -62,20 +62,20 @@ export default function Home() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl sm:text-5xl md:text-6xl font-serif font-semibold text-cream-100 leading-[1.08] tracking-tight mb-5"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-serif font-semibold text-cream-100 leading-[1.12] tracking-tight mb-6"
               >
-                Financial literacy,
+                Where professional credit guidance
                 <br />
-                <span className="text-brand-gold">one cup at a time.</span>
+                <span className="text-brand-gold">meets the smooth simplicity of a great cup.</span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-base md:text-lg text-cream-400/95 leading-relaxed mb-8 max-w-md font-light"
+                className="text-base md:text-lg text-cream-400/95 leading-relaxed mb-8 max-w-lg font-light"
               >
-                Credit Coffee is Seattle-inspired financial media — calm, clear, and built for people who care about credit, banking, and building wealth without the noise.
+                Credit Coffee brings bank-caliber perspective down to earth — clear writing, honest tools, and a pace that respects your time.
               </motion.p>
 
               <motion.div
