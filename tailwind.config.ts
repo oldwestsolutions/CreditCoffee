@@ -52,20 +52,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: [
-          '"maison-neue"',
-          '"Maison Neue"',
-          "var(--font-inter)",
-          "system-ui",
-          "sans-serif",
-        ],
-        serif: [
-          '"maison-neue"',
-          '"Maison Neue"',
-          "var(--font-inter)",
-          "system-ui",
-          "sans-serif",
-        ],
+        /* Sandover is commercial; Cormorant (loaded as --font-sandover) matches the editorial feel site-wide */
+        sans: ["var(--font-sandover)", "Cormorant", "Georgia", "serif"],
+        serif: ["var(--font-sandover)", "Cormorant", "Georgia", "serif"],
       },
       backgroundImage: {
         grain:

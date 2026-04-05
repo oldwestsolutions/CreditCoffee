@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Cormorant } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
+/* Cormorant: elegant editorial serif — closest free web match to Sandover’s tone */
+const sandover = Cormorant({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sandover",
   display: "swap",
 });
-
-const typekitId = process.env.NEXT_PUBLIC_TYPEKIT_KIT_ID;
 
 export const metadata: Metadata = {
   title: "credit.coffee — Financial Intelligence, Brewed Daily",
@@ -38,12 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable}`}>
-      <head>
-        {typekitId ? (
-          <link rel="stylesheet" href={`https://use.typekit.net/${typekitId}.css`} />
-        ) : null}
-      </head>
+    <html lang="en" className={`scroll-smooth ${sandover.variable}`}>
       <body className="flex flex-col min-h-screen font-sans antialiased">
         <div className="grain-overlay" />
         <Navbar />
