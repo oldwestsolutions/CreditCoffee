@@ -188,13 +188,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tools */}
+      {/* NEAR — decentralized credit planning */}
       <section className="py-24 md:py-32 bg-white">
         <div className="container-main">
-          <div className="mb-12">
-            <h2 className="section-heading mb-3">Tools</h2>
+          <div className="mb-12 max-w-3xl">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-cream-600 mb-4">
+              NEAR Protocol
+            </p>
+            <h2 className="section-heading mb-3">Decentralized credit, made legible</h2>
             <p className="section-subheading max-w-2xl">
-              Simple, practical calculators and planners to understand your credit and build a clearer path forward.
+              A focused set of planning modules for the dimensions decentralized credit on NEAR cares about:
+              reputation, liquidity, and obligations. Grounded in practical math today; designed to sit
+              alongside open, composable credit infrastructure as the ecosystem matures.
             </p>
           </div>
 

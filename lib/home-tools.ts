@@ -3,6 +3,8 @@ export interface ToolAction {
   title: string;
   description: string;
   buttonText: string;
+  /** Small label above the title (e.g. protocol theme for the card). */
+  badge?: string;
 }
 
 export interface HomeToolCard {
@@ -17,14 +19,15 @@ export const homeToolCards: HomeToolCard[] = [
     id: "credit-score-simulator",
     imageUrl:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
-    imageAlt: "Credit score planning",
+    imageAlt: "Financial planning and credit signal modeling",
     items: [
       {
         slug: "credit-score-simulator",
-        title: "Credit Score Simulator",
+        badge: "Reputation & signals",
+        title: "Credit posture simulator",
         description:
-          "Adjust balances, utilization, and on-time payments to see how your score could change.",
-        buttonText: "Open Simulator",
+          "Stress-test balances, utilization, and payment behavior—the same levers that inform traditional scores and emerging on-chain credit primitives across the NEAR ecosystem.",
+        buttonText: "Open simulator",
       },
     ],
   },
@@ -32,14 +35,15 @@ export const homeToolCards: HomeToolCard[] = [
     id: "credit-utilization-calculator",
     imageUrl:
       "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
-    imageAlt: "Credit utilization",
+    imageAlt: "Liquidity and capital efficiency",
     items: [
       {
         slug: "credit-utilization-calculator",
-        title: "Credit Utilization Calculator",
+        badge: "Liquidity",
+        title: "Utilization & capital efficiency",
         description:
-          "Enter your credit limits and balances to instantly calculate your utilization ratio.",
-        buttonText: "Calculate Utilization",
+          "Map limits and balances to a clear utilization picture—essential context when credit is programmable, composable, and settled with transparency on NEAR.",
+        buttonText: "Calculate utilization",
       },
     ],
   },
@@ -47,14 +51,15 @@ export const homeToolCards: HomeToolCard[] = [
     id: "loan-comparison",
     imageUrl:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-    imageAlt: "Loan comparison",
+    imageAlt: "Comparing loan terms and obligations",
     items: [
       {
         slug: "loan-comparison",
-        title: "Loan Comparison Tool",
+        badge: "Obligations",
+        title: "Obligation comparison",
         description:
-          "Compare interest rates, terms, and total cost across multiple loan options.",
-        buttonText: "Compare Loans",
+          "Contrast rates, terms, and total cost across options—whether you are bridging familiar products or evaluating NEAR-native lending and credit-market designs.",
+        buttonText: "Compare terms",
       },
     ],
   },

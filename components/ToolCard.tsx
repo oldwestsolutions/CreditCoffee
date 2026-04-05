@@ -38,7 +38,7 @@ export function ToolCard({ card, index }: { card: HomeToolCard; index: number })
       <div className="p-6 flex flex-col flex-1">
         {card.items.map((item, idx) => (
           <div key={item.slug} className={idx > 0 ? "mt-8 pt-8 border-t border-cream-200" : ""}>
-            <span className="tag w-fit mb-3">Tool</span>
+            <span className="tag w-fit mb-3">{item.badge ?? "Module"}</span>
             <h3 className="text-lg font-serif font-semibold text-forest-900 mb-2 leading-tight group-hover:text-brand-gold transition-colors">
               {item.title}
             </h3>

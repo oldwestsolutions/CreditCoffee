@@ -16,7 +16,7 @@ export default function ToolPlaceholderPage({ params }: Props) {
     <div className="min-h-[70vh] bg-cream-200">
       <div className="container-main py-16 md:py-24 max-w-2xl">
         <p className="text-xs font-medium uppercase tracking-wider text-cream-600 mb-3">
-          Tools
+          NEAR credit modules
         </p>
         <h1 className="text-3xl md:text-4xl font-serif font-semibold text-forest-900 mb-4">
           {tool.title}
