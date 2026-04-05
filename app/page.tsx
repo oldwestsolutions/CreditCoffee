@@ -206,34 +206,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Coinbase payouts — product-inspired UI */}
-      <section className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-[#EEF2FF]">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_80%_at_50%_-20%,rgba(0,82,255,0.08),transparent)] pointer-events-none" />
+      {/* Coinbase payouts */}
+      <section className="py-24 md:py-32 bg-forest-950 text-cream-100 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_40%,rgba(201,169,110,0.12),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_90%_80%,rgba(11,61,46,0.9),transparent)]" />
+        <div
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage: `linear-gradient(rgba(245,241,232,0.4) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(245,241,232,0.4) 1px, transparent 1px)`,
+            backgroundSize: "48px 48px",
+          }}
+        />
 
         <div className="container-main relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/90 border border-slate-200/80 px-3 py-1.5 shadow-sm mb-6">
-                <span className="flex h-6 w-6 items-center justify-center rounded-md bg-coinbase-blue text-[11px] font-bold text-white">
+              <div className="inline-flex items-center gap-2 rounded-full bg-forest-800/80 border border-forest-700/60 px-3 py-1.5 mb-6">
+                <span className="flex h-6 w-6 items-center justify-center rounded-md bg-brand-gold/20 text-[11px] font-bold text-brand-gold border border-brand-gold/30">
                   C
                 </span>
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-600">
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-cream-400">
                   Coinbase
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-semibold leading-[1.15] tracking-tight text-slate-900 mb-5">
+              <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-semibold leading-[1.15] tracking-tight text-cream-50 mb-5">
                 Get paid in crypto, right in your Coinbase wallet.
               </h2>
-              <p className="text-slate-600 text-base md:text-lg leading-relaxed mb-10 max-w-lg">
+              <p className="text-cream-400/95 text-base md:text-lg font-light leading-relaxed mb-10 max-w-lg">
                 Credit Coffee sends $BEAN rewards to the same Coinbase wallet you already use to buy, sell, and self-custody. One balance, one login, full control — the way modern on-ramp products are meant to feel.
               </p>
 
-              <ul className="space-y-5">
+              <ul className="space-y-6">
                 {[
                   {
                     title: "Link your Coinbase wallet",
@@ -254,12 +263,12 @@ export default function Home() {
                   const FeatureIcon = row.Icon;
                   return (
                     <li key={row.title} className="flex gap-4">
-                      <div className="shrink-0 w-10 h-10 rounded-full bg-coinbase-blue/10 flex items-center justify-center text-coinbase-blue">
+                      <div className="shrink-0 w-11 h-11 rounded-xl bg-brand-gold/10 border border-brand-gold/25 flex items-center justify-center text-brand-gold">
                         <FeatureIcon className="w-5 h-5" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-slate-900 mb-0.5">{row.title}</h3>
-                        <p className="text-sm text-coinbase-muted leading-relaxed">{row.body}</p>
+                        <h3 className="font-semibold text-lg text-cream-100 mb-1">{row.title}</h3>
+                        <p className="text-sm text-cream-500 leading-relaxed">{row.body}</p>
                       </div>
                     </li>
                   );
@@ -271,47 +280,44 @@ export default function Home() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65, delay: 0.06 }}
-              className="lg:sticky lg:top-28"
+              transition={{ duration: 0.65, delay: 0.08 }}
+              className="relative"
             >
-              <div className="rounded-2xl border border-coinbase-line bg-coinbase-surface shadow-[0_24px_80px_-24px_rgba(15,23,42,0.25)] overflow-hidden">
-                <div className="px-5 pt-5 pb-4 border-b border-coinbase-line bg-white">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex items-center gap-3 min-w-0">
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-coinbase-blue text-sm font-bold text-white">
-                        C
-                      </span>
-                      <div className="min-w-0">
-                        <p className="text-[11px] font-medium uppercase tracking-wide text-coinbase-muted">
-                          Payout destination
-                        </p>
-                        <p className="text-lg font-semibold text-slate-900 truncate">Coinbase Wallet</p>
-                      </div>
-                    </div>
-                    <span className="shrink-0 inline-flex items-center rounded-full bg-[#E8FDF3] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#098551] border border-[#B8EBD0]">
-                      Connected
+              <div className="absolute -inset-px rounded-3xl bg-gradient-to-br from-brand-gold/40 via-brand-gold/10 to-transparent opacity-80 blur-sm" />
+              <div className="relative rounded-3xl border border-cream-100/10 bg-gradient-to-br from-forest-900/95 to-forest-950 p-8 md:p-10 shadow-2xl backdrop-blur-sm overflow-hidden">
+                <div className="flex items-start justify-between gap-4 mb-8 pb-6 border-b border-cream-100/10">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-gold/20 text-sm font-bold text-brand-gold border border-brand-gold/25">
+                      C
                     </span>
+                    <div className="min-w-0">
+                      <p className="text-[10px] uppercase tracking-widest text-cream-500 mb-1">
+                        Payout destination
+                      </p>
+                      <p className="text-xl font-semibold text-cream-100 truncate">Coinbase Wallet</p>
+                    </div>
                   </div>
+                  <span className="shrink-0 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-emerald-500/15 text-emerald-300 border border-emerald-400/20">
+                    Connected
+                  </span>
                 </div>
 
-                <div className="p-5 bg-coinbase-wash">
-                  <div className="rounded-xl border border-coinbase-line bg-white p-5 shadow-sm">
-                    <p className="text-xs font-medium text-coinbase-muted mb-1">Available balance</p>
-                    <div className="flex items-baseline gap-2 flex-wrap">
-                      <span className="text-4xl font-semibold tracking-tight text-slate-900 tabular-nums">
-                        47.85
-                      </span>
-                      <span className="text-lg font-semibold text-coinbase-blue">$BEAN</span>
-                    </div>
-                    <div className="mt-4 h-px bg-coinbase-line" />
-                    <p className="mt-3 text-xs text-coinbase-muted">
-                      Last payout · Today, 9:14 AM
-                    </p>
+                <div className="rounded-2xl bg-black/25 border border-cream-100/5 p-6 mb-6">
+                  <p className="text-xs text-cream-500 mb-2">Available balance</p>
+                  <div className="flex items-baseline gap-2 flex-wrap">
+                    <span className="text-4xl font-semibold tracking-tight text-cream-50 tabular-nums">
+                      47.85
+                    </span>
+                    <span className="text-2xl font-semibold text-brand-gold">$BEAN</span>
                   </div>
-                  <p className="mt-4 text-center text-[11px] leading-relaxed text-coinbase-muted px-1">
-                    Sample balance for demonstration. Connect Coinbase in the app to receive live payouts when available.
+                  <div className="mt-4 h-px bg-cream-100/10" />
+                  <p className="text-xs text-cream-600 mt-3 font-mono">
+                    Last payout · Today, 9:14 AM
                   </p>
                 </div>
+                <p className="text-xs text-cream-500 leading-relaxed text-center">
+                  Sample balance for demonstration. Connect Coinbase in the app to receive live payouts when available.
+                </p>
               </div>
             </motion.div>
           </div>
