@@ -329,7 +329,7 @@ export const mockDashboard: UserDashboard = {
   referralCount: 5,
   wallet: {
     balance: 47.85,
-    tokenSymbol: "BEAN",
+    tokenSymbol: "USDC",
     address: "0x1a2b...9f8e",
   },
   transactions: mockTransactions,

@@ -50,7 +50,7 @@ export default function LoginPage() {
             </h1>
             <p className="text-sm text-cream-700">
               {isSignUp
-                ? "Start earning $BEAN for your attention."
+                ? "Connect your wallet and earn USDC from advertiser revenue share."
                 : "Your financial intelligence awaits."}
             </p>
           </div>

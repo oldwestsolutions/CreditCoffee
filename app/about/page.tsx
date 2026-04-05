@@ -23,7 +23,7 @@ const values = [
   },
   {
     title: "Earned Attention",
-    desc: "We don't mine your data. We reward your attention. $BEAN isn't a gimmick — it's a statement that your time has monetary value.",
+    desc: "We don't mine your data. We share advertiser spend with you. When you engage with sponsor content, a slice of that budget settles as USDC — your time has real value.",
   },
 ];
 
@@ -102,7 +102,7 @@ export default function AboutPage() {
                 <p className="text-forest-900 font-normal">
                   credit.coffee is that conversation, digitized. We took the intellectual atmosphere 
                   of a Seattle Reserve bar, combined it with the rigor of a financial journal, and 
-                  added something new: a token economy that pays you to pay attention.
+                  added something new: transparent ad-revenue sharing that pays you to pay attention.
                 </p>
                 <blockquote className="border-l-2 border-brand-gold pl-6 my-8">
                   <p className="text-xl font-serif text-forest-900 italic">
@@ -215,7 +215,7 @@ export default function AboutPage() {
                 {[
                   {
                     title: "Sponsored Content",
-                    desc: "Curated ads from vetted financial products. You earn $BEAN for viewing them.",
+                    desc: "Curated ads from vetted financial products. You earn a USDC share of the spend when you view them.",
                   },
                   {
                     title: "Affiliate Partnerships",
@@ -226,8 +226,8 @@ export default function AboutPage() {
                     desc: "Advanced strategies, model portfolios, and direct analyst access.",
                   },
                   {
-                    title: "Token Economy (Future)",
-                    desc: "On-chain $BEAN with real utility, governance, and exchange value.",
+                    title: "On-chain settlement (Future)",
+                    desc: "Programmatic USDC payouts, clearer attribution, and optional governance for the community.",
                   },
                 ].map((item, i) => (
                   <motion.div
@@ -267,7 +267,7 @@ export default function AboutPage() {
               Read the Newsletter
             </Link>
             <Link href="/ads" className="btn-secondary text-base px-8 py-4">
-              Start Earning $BEAN
+              Earn ad share (USDC)
             </Link>
           </div>
         </div>

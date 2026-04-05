@@ -227,26 +227,18 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 rounded-full bg-forest-800/80 border border-forest-700/60 px-3 py-1.5 mb-6">
-                <span className="flex h-6 w-6 items-center justify-center rounded-md bg-brand-gold/20 text-[11px] font-bold text-brand-gold border border-brand-gold/30">
-                  C
-                </span>
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-cream-400">
-                  Coinbase
-                </span>
-              </div>
               <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-semibold leading-[1.15] tracking-tight text-cream-50 mb-5">
                 Get paid in crypto, right in your Coinbase wallet.
               </h2>
               <p className="text-cream-400/95 text-base md:text-lg font-light leading-relaxed mb-10 max-w-lg">
-                Credit Coffee sends $BEAN rewards to the same Coinbase wallet you already use to buy, sell, and self-custody. One balance, one login, full control — the way modern on-ramp products are meant to feel.
+                Advertisers fund our network. When you watch sponsor content, you receive a share of that spend as <span className="text-cream-200">USDC</span> — stable, spendable, and sent to the same Coinbase wallet you already use.
               </p>
 
               <ul className="space-y-6">
                 {[
                   {
                     title: "Link your Coinbase wallet",
-                    body: "Authorize once. Payouts from engagement flow straight into your primary wallet.",
+                    body: "Authorize once. Your share of advertiser payouts settles as USDC in the wallet you choose.",
                     Icon: IconWallet,
                   },
                   {
@@ -256,7 +248,7 @@ export default function Home() {
                   },
                   {
                     title: "Unified holdings",
-                    body: "View $BEAN next to your other assets without leaving the Coinbase experience.",
+                    body: "View USDC from ad sharing alongside your other Coinbase assets in one place.",
                     Icon: IconChart,
                   },
                 ].map((row) => {
@@ -286,16 +278,11 @@ export default function Home() {
               <div className="absolute -inset-px rounded-3xl bg-gradient-to-br from-brand-gold/40 via-brand-gold/10 to-transparent opacity-80 blur-sm" />
               <div className="relative rounded-3xl border border-cream-100/10 bg-gradient-to-br from-forest-900/95 to-forest-950 p-8 md:p-10 shadow-2xl backdrop-blur-sm overflow-hidden">
                 <div className="flex items-start justify-between gap-4 mb-8 pb-6 border-b border-cream-100/10">
-                  <div className="flex items-center gap-3 min-w-0">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-gold/20 text-sm font-bold text-brand-gold border border-brand-gold/25">
-                      C
-                    </span>
-                    <div className="min-w-0">
-                      <p className="text-[10px] uppercase tracking-widest text-cream-500 mb-1">
-                        Payout destination
-                      </p>
-                      <p className="text-xl font-semibold text-cream-100 truncate">Coinbase Wallet</p>
-                    </div>
+                  <div className="min-w-0">
+                    <p className="text-[10px] uppercase tracking-widest text-cream-500 mb-1">
+                      Payout destination
+                    </p>
+                    <p className="text-xl font-semibold text-cream-100 truncate">Coinbase Wallet</p>
                   </div>
                   <span className="shrink-0 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-emerald-500/15 text-emerald-300 border border-emerald-400/20">
                     Connected
@@ -303,12 +290,12 @@ export default function Home() {
                 </div>
 
                 <div className="rounded-2xl bg-black/25 border border-cream-100/5 p-6 mb-6">
-                  <p className="text-xs text-cream-500 mb-2">Available balance</p>
+                  <p className="text-xs text-cream-500 mb-2">Ad share balance (USDC)</p>
                   <div className="flex items-baseline gap-2 flex-wrap">
                     <span className="text-4xl font-semibold tracking-tight text-cream-50 tabular-nums">
                       47.85
                     </span>
-                    <span className="text-2xl font-semibold text-brand-gold">$BEAN</span>
+                    <span className="text-2xl font-semibold text-brand-gold">USDC</span>
                   </div>
                   <div className="mt-4 h-px bg-cream-100/10" />
                   <p className="text-xs text-cream-600 mt-3 font-mono">

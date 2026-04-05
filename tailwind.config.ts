@@ -52,9 +52,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        /* Sandover is commercial; Cormorant (loaded as --font-sandover) matches the editorial feel site-wide */
-        sans: ["var(--font-sandover)", "Cormorant", "Georgia", "serif"],
-        serif: ["var(--font-sandover)", "Cormorant", "Georgia", "serif"],
+        sans: ["var(--font-luxury)", "Cormorant Garamond", "Georgia", "serif"],
+        serif: ["var(--font-luxury)", "Cormorant Garamond", "Georgia", "serif"],
       },
       backgroundImage: {
         grain:

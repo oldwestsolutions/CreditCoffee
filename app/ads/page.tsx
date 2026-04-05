@@ -66,7 +66,7 @@ export default function AdsPage() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full 
                               bg-brand-gold/10 border border-brand-gold/20 mb-6">
                 <span className="text-brand-gold text-xs font-medium tracking-wider uppercase">
-                  Earn $BEAN
+                  Earn USDC
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-serif font-semibold text-cream-100 
@@ -76,8 +76,8 @@ export default function AdsPage() {
                 <span className="text-brand-gold">Has Value</span>
               </h1>
               <p className="text-lg text-cream-400 font-light leading-relaxed">
-                View curated sponsor content, complete the Coffee Break timer, and earn 
-                $BEAN tokens. Real rewards for real engagement.
+                View curated sponsor content, complete the Coffee Break timer, and earn a
+                share of advertiser spend as USDC. Real payouts for real engagement.
               </p>
             </div>
 
@@ -87,7 +87,7 @@ export default function AdsPage() {
                 <div className="text-3xl font-serif font-semibold text-brand-gold">
                   {earnings.toFixed(2)}
                 </div>
-                <div className="text-xs text-cream-500 mt-1">$BEAN Earned</div>
+                <div className="text-xs text-cream-500 mt-1">USDC earned</div>
               </div>
               <div className="w-px bg-forest-700" />
               <div className="text-center">
@@ -117,7 +117,7 @@ export default function AdsPage() {
                 <div>
                   <h3 className="font-semibold text-forest-900">Connect Your Wallet</h3>
                   <p className="text-sm text-cream-700">
-                    Connect a wallet to start earning $BEAN tokens for viewing ads.
+                    Connect a wallet to receive USDC from advertiser revenue share when you view ads.
                   </p>
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function AdsPage() {
                        bg-forest-900 text-cream-100 shadow-xl flex items-center gap-3"
           >
             <span className="text-brand-gold text-lg">☕</span>
-            <span className="font-medium">+{showEarnedToast.toFixed(2)} $BEAN earned!</span>
+            <span className="font-medium">+{showEarnedToast.toFixed(2)} USDC earned!</span>
           </motion.div>
         )}
       </AnimatePresence>
@@ -174,7 +174,7 @@ export default function AdsPage() {
                 <div className="flex items-center justify-between mb-3">
                   <span className="tag">Sponsored by {activeAd.sponsor}</span>
                   <span className="text-sm font-medium text-brand-gold">
-                    +{activeAd.reward.toFixed(2)} $BEAN
+                    +{activeAd.reward.toFixed(2)} USDC
                   </span>
                 </div>
                 <h3 className="text-xl font-serif font-semibold text-forest-900 mb-2">
@@ -237,11 +237,11 @@ export default function AdsPage() {
                 Coffee Break Complete!
               </h3>
               <p className="text-sm text-cream-700 mb-4">
-                You earned <span className="font-semibold text-brand-gold">{activeAd.reward.toFixed(2)} $BEAN</span> for 
+                You earned <span className="font-semibold text-brand-gold">{activeAd.reward.toFixed(2)} USDC</span> for 
                 viewing this ad.
               </p>
               <div className="text-xs text-cream-600 mb-6">
-                Total balance: {earnings.toFixed(2)} $BEAN
+                Total balance: {earnings.toFixed(2)} USDC
               </div>
               <button
                 onClick={() => setViewState(null)}
@@ -292,7 +292,7 @@ export default function AdsPage() {
                   />
                   <div className="absolute top-3 right-3 px-3 py-1 rounded-full 
                                   bg-brand-gold/90 text-forest-900 text-xs font-semibold">
-                    +{ad.reward.toFixed(2)} $BEAN
+                    +{ad.reward.toFixed(2)} USDC
                   </div>
                 </div>
                 <div className="p-6">

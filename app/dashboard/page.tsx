@@ -44,7 +44,7 @@ export default function DashboardPage() {
             <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full 
                             bg-brand-gold/10 border border-brand-gold/20">
               <span className="text-brand-gold text-xs font-semibold">
-                {data.wallet.balance.toFixed(2)} $BEAN
+                {data.wallet.balance.toFixed(2)} {data.wallet.tokenSymbol}
               </span>
             </div>
             <button
@@ -101,7 +101,7 @@ export default function DashboardPage() {
             {
               label: "Total Earned",
               value: `${data.totalEarned.toFixed(2)}`,
-              suffix: "$BEAN",
+              suffix: data.wallet.tokenSymbol,
               color: "text-brand-gold",
             },
             {
