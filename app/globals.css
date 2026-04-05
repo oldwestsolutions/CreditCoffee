@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
-
 @layer base {
   :root {
     --brand-green: #0B3D2E;
@@ -17,12 +15,7 @@
   }
 
   body {
-    @apply bg-cream-200 text-forest-900 antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
-  }
-
-  h1, h2, h3 {
-    font-family: 'Playfair Display', Georgia, serif;
+    @apply bg-cream-200 text-forest-900 antialiased font-sans;
   }
 
   ::selection {
@@ -79,7 +72,7 @@
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl lg:text-5xl font-serif font-semibold 
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold 
            text-forest-900 tracking-tight;
   }
 

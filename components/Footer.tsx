@@ -6,18 +6,15 @@ import { usePathname } from "next/navigation";
 const footerLinks = {
   product: [
     { label: "Newsletter", href: "/newsletter" },
-    { label: "Perks Directory", href: "/perks" },
-    { label: "Dashboard", href: "/dashboard" },
+    { label: "Wallet", href: "/dashboard" },
   ],
   company: [
     { label: "About", href: "/about" },
-    { label: "Mission", href: "/about" },
     { label: "Contact", href: "/about" },
   ],
   legal: [
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Service", href: "#" },
-    { label: "Cookie Policy", href: "#" },
   ],
 };
 
@@ -38,7 +35,7 @@ export default function Footer() {
                 <path d="M22 13H23C24.1046 13 25 13.8954 25 15C25 16.1046 24.1046 17 23 17H22V13Z" fill="#0B3D2E"/>
                 <path d="M10 26H18C18 26 17.5 28 14 28C10.5 28 10 26 10 26Z" fill="currentColor" opacity="0.5"/>
               </svg>
-              <span className="text-xl font-serif font-semibold text-cream-100 tracking-tight">
+              <span className="text-xl font-semibold text-cream-100 tracking-tight">
                 Credit Coffee
               </span>
             </Link>
@@ -46,40 +43,23 @@ export default function Footer() {
               Financial intelligence, brewed daily. Read curated content, unlock perks, 
               and build your financial literacy. Credit is not debt — it&apos;s access.
             </p>
-            <div className="space-y-3 max-w-sm">
-              <a
-                href="tel:+19453824660"
-                className="flex items-start gap-3 text-sm text-cream-400 hover:text-cream-100 transition-colors"
-              >
-                <span className="shrink-0 mt-0.5 text-brand-gold" aria-hidden>
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
-                    />
-                  </svg>
-                </span>
-                <span>(945) 382-4660</span>
-              </a>
-              <p className="flex items-start gap-3 text-sm text-cream-400 m-0">
-                <span className="shrink-0 mt-0.5 text-brand-gold" aria-hidden>
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-                    />
-                  </svg>
-                </span>
-                <span>130 N Preston Rd in Prosper, TX</span>
-              </p>
-            </div>
+            <p className="flex items-center gap-3 text-sm text-cream-400 m-0 max-w-sm">
+              <span className="shrink-0 text-brand-gold" aria-hidden>
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                  />
+                </svg>
+              </span>
+              <span>Prosper, TX</span>
+            </p>
           </div>
 
           <div>

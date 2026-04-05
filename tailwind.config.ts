@@ -17,6 +17,14 @@ const config: Config = {
           gold: "#C9A96E",
           latte: "#D4C5A9",
         },
+        coinbase: {
+          blue: "#0052FF",
+          "blue-hover": "#0040CC",
+          muted: "#5B616E",
+          line: "#EEF0F3",
+          surface: "#FFFFFF",
+          wash: "#F5F8FF",
+        },
         forest: {
           50: "#f0f7f4",
           100: "#dcefe7",
@@ -44,11 +52,24 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ["'Playfair Display'", "Georgia", "serif"],
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: [
+          '"maison-neue"',
+          '"Maison Neue"',
+          "var(--font-inter)",
+          "system-ui",
+          "sans-serif",
+        ],
+        serif: [
+          '"maison-neue"',
+          '"Maison Neue"',
+          "var(--font-inter)",
+          "system-ui",
+          "sans-serif",
+        ],
       },
       backgroundImage: {
-        "grain": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E\")",
+        grain:
+          'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\' opacity=\'0.04\'/%3E%3C/svg%3E")',
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out forwards",
